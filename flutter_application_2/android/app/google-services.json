@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "428624449697",
+    "project_id": "taurus-12dd9",
+    "storage_bucket": "taurus-12dd9.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:428624449697:android:dd72c57bfd6932899020e0",
+        "android_client_info": {
+          "package_name": "com.example.flutter_application_2"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBereluMgXliRsrUw4r5iFuInSUEIFJznI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

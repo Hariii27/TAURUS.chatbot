@@ -1,14 +1,41 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
 import 'package:speech_to_text/speech_to_text.dart' as stt;
 import 'package:flutter_spinkit/flutter_spinkit.dart';
+import 'package:firebase_core/firebase_core.dart';
+
+
 
 // Global chat history storage
 Map<int, List<Map<String, String>>> globalChatHistory = {};
 int _currentPageId = 0; // Unique ID for each chat page
 
-void main() {
+void main() async { 
+  WidgetsFlutterBinding.ensureInitialized();
+
+  if(kIsWeb){
+  await Firebase.initializeApp(
+    options:FirebaseOptions(
+      apiKey: "AIzaSyDEel5sdkezt5k8MiDSQ9WCtloHRtS9Ss4",
+      authDomain: "taurus-12dd9.firebaseapp.com",
+      projectId: "taurus-12dd9",
+      storageBucket: "taurus-12dd9.firebasestorage.app",
+      messagingSenderId: "428624449697",
+      appId: "1:428624449697:web:bd81251818de332e9020e0",
+      measurementId: "G-3M2KKYKWSF"
+   ),
+   
+   );
+   
+   }
+   else{
+     await Firebase.initializeApp();
+   
+   }
+   print('Firebase initialized');
+
   runApp(TaurusApp());
 }
 
